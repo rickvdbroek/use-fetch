@@ -1,0 +1,35 @@
+{
+  "name": "use-fetch-api",
+  "version": "1.0.0",
+  "description": "A custom React hook that uses the Fetch API.",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickvdbroek/use-fetch.git"
+  },
+  "keywords": [
+    "fetch",
+    "hooks",
+    "use-fetch"
+  ],
+  "author": "Rick van den Broek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rickvdbroek/use-fetch/issues"
+  },
+  "homepage": "https://github.com/rickvdbroek/use-fetch#readme",
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.19",
+    "react": "^16.12.0"
+  }
+}
