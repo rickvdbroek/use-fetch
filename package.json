@@ -6,6 +6,7 @@
   "types": "lib",
   "scripts": {
     "build": "tsc -p .",
+    "dev": "tsc -p . --w",
     "commit": "git cz"
   },
   "repository": {
@@ -27,14 +28,13 @@
     "cz-conventional-changelog": "^3.1.0",
     "cz-emoji": "^1.2.0",
     "semantic-release": "^17.0.2",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "react": "^16.12.0",
+    "@types/react": "^16.9.19"
   },
   "peerDependencies": {
-    "react": "^16.12.0"
-  },
-  "dependencies": {
-    "@types/react": "^16.9.19",
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "@types/react": "^16.9.19"
   },
   "config": {
     "commitizen": {
