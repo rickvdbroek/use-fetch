@@ -6,7 +6,7 @@
   "types": "lib",
   "scripts": {
     "build": "tsc -p .",
-    "commit": "npx git-cz"
+    "commit": "git cz"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/rickvdbroek/use-fetch#readme",
   "devDependencies": {
+    "cz-conventional-changelog": "^3.1.0",
+    "cz-emoji": "^1.2.0",
     "semantic-release": "^17.0.2",
     "typescript": "^3.7.5"
   },
@@ -33,5 +35,10 @@
   "dependencies": {
     "@types/react": "^16.9.19",
     "react": "^16.12.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
   }
 }
