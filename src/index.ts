@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from 'react';
 
 type Action =
-  | { type: 'SET_LOADING' }
+  | { type: 'START_SEARCH' }
   | { type: 'SET_SUCCESS', payload: { data: any } }
   | { type: 'SET_ERROR', payload: { error: any } };
 
@@ -13,9 +13,10 @@ interface IState {
 
 const reducer = (state: IState, action: Action) => {
   switch (action.type) {
-    case 'SET_LOADING':
+    case 'START_SEARCH':
       return {
         ...state,
+        error: '',
         loading: true,
       };
     case 'SET_SUCCESS':
@@ -40,7 +41,7 @@ const useFetch = (url: string, resolver: keyof Omit<Body, 'body' | 'bodyUsed'>, 
 
   useEffect(() => {
     const fetchData = async () => {
-      dispatch({ type: 'SET_LOADING' });
+      dispatch({ type: 'START_SEARCH' });
 
       try {
         const res = await fetch(url, options);
