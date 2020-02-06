@@ -36,7 +36,7 @@ const reducer = (state: IState, action: Action) => {
   }
 };
 
-const useFetch = (url: string, resolver: keyof Omit<Body, 'body' | 'bodyUsed'>, options?: RequestInit): IState => {
+const useFetch = (url: string, resolver?: keyof Omit<Body, 'body' | 'bodyUsed'>, options?: RequestInit): IState => {
   const [state, dispatch] = useReducer(reducer, { data: null, error: null, loading: false });
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const useFetch = (url: string, resolver: keyof Omit<Body, 'body' | 'bodyUsed'>, 
 
       try {
         const res = await fetch(url, options);
-        const resolvedData = await res[resolver]();
+        const resolvedData = await res[resolver || 'json']();
         dispatch({ type: 'SET_SUCCESS', payload: resolvedData });
       } catch (error) {
         dispatch({ type: 'SET_ERROR', payload: error });
