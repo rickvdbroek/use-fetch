@@ -1,3 +1,5 @@
+![Release](https://github.com/rickvdbroek/use-fetch/workflows/Release/badge.svg?branch=master)
+
 # use-fetch-api
 A custom React hook for fetching data using the Fetch API.
 
