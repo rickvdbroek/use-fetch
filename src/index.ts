@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from 'react';
 
 type Action =
-  | { type: 'START_SEARCH' }
+  | { type: 'START_CALL' }
   | { type: 'SET_SUCCESS', payload: { data: any } }
   | { type: 'SET_ERROR', payload: { error: any } };
 
@@ -13,7 +13,7 @@ interface IState {
 
 const reducer = (state: IState, action: Action) => {
   switch (action.type) {
-    case 'START_SEARCH':
+    case 'START_CALL':
       return {
         ...state,
         error: '',
@@ -36,16 +36,16 @@ const reducer = (state: IState, action: Action) => {
   }
 };
 
-const useFetch = (url: string, resolver?: keyof Omit<Body, 'body' | 'bodyUsed'>, options?: RequestInit): IState => {
+const useFetch = (url: string, resolver: keyof Omit<Body, 'body' | 'bodyUsed'>, options?: RequestInit): IState => {
   const [state, dispatch] = useReducer(reducer, { data: null, error: null, loading: false });
 
   useEffect(() => {
     const fetchData = async () => {
-      dispatch({ type: 'START_SEARCH' });
+      dispatch({ type: 'START_CALL' });
 
       try {
         const res = await fetch(url, options);
-        const resolvedData = await res[resolver || 'json']();
+        const resolvedData = await res[resolver]();
         dispatch({ type: 'SET_SUCCESS', payload: resolvedData });
       } catch (error) {
         dispatch({ type: 'SET_ERROR', payload: error });
