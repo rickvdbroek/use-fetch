@@ -6,7 +6,7 @@ A custom React hook for fetching data using the Fetch API.
 ## Getting started
 To use this hook simply run the following command: `npm install use-fetch-api`. After installing the package you can start using it in your project like so:
 
-```
+```typescript
 import { useFetch } from 'use-fetch-api';
 
 const App = () => {
