@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -p .",
     "dev": "tsc -p . --w",
-    "commit": "npx git cz"
+    "commit": "npx git-cz"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,5 @@
     "react": "^16.12.0",
     "semantic-release": "^17.0.2",
     "typescript": "^3.7.5"
-  },
-  "peerDependencies": {
-    "react": "^16.12.0",
-    "@types/react": "^16.9.19"
   }
 }
