@@ -1,0 +1,1 @@
+{"version":3,"file":"useLazyFetch.d.ts","sourceRoot":"","sources":["../../src/hooks/useLazyFetch.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,MAAM,EAAE,MAAM,aAAa,CAAC;AAGrC,eAAO,MAAM,YAAY,QAAS,MAAM,YAAY,MAAM,IAAI,CAAC,IAAI,EAAE,MAAM,GAAG,UAAU,CAAC,wCAA0B,CAAC,MAAM,EAAE,MAAM,IAAI,CAiBrI,CAAC"}

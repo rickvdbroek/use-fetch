@@ -6,7 +6,7 @@
   "types": "lib",
   "scripts": {
     "build": "tsc -p .",
-    "dev": "tsc -p . --w",
+    "start": "tsc -p . --w",
     "commit": "npx git-cz"
   },
   "repository": {
@@ -25,9 +25,11 @@
   },
   "homepage": "https://github.com/rickvdbroek/use-fetch#readme",
   "devDependencies": {
+    "semantic-release": "^17.0.8",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
     "@types/react": "^16.9.19",
-    "react": "^16.12.0",
-    "semantic-release": "^17.0.2",
-    "typescript": "^3.7.5"
+    "react": "^16.13.1"
   }
 }
